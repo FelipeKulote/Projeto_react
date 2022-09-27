@@ -1,22 +1,69 @@
+import { useState } from "react";
 import "./card.css";
 
-export function Card() {
+export function Form() {
+  const [newCard, setNewCard] = useState();
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const card = {
+      name: e.target.name.value,
+      type: e.target.type.value,
+      atk: e.target.atk.value,
+      def: e.target.def.value,
+    };
+
+    console.log(card);
+    console.log(newCard);
+  }
+
   return (
-    <section className="cards">
-      <div>
-        <span>Nome da carta:</span>
-        <h2></h2>
-      </div>
-      <div>
-        <span>Tipo:</span>
-        <h3></h3>
-      </div>
-      <div>
-        <span>ATK:</span>
-        <h4></h4>
-      </div>
-        <span>DEF:</span>
-        <h4></h4>
+    <section className="form">
+      <form onSubmit={handleSubmit} className="form-input">
+        <div>
+          <span>Nome da carta:</span>
+          <input
+            type="text"
+            name="name"
+            onChange={(e) => {
+              setNewCard({ ...newCard, name: e.target.value});
+            }}
+          />
+        </div>
+        <div>
+          <span>Tipo:</span>
+          <input
+            type="text"
+            name="type"
+            onChange={(e) => {
+              setNewCard({ ...newCard, type: e.target.value});
+            }}
+          />
+        </div>
+        <div>
+          <span>ATK:</span>
+          <input
+            type="number"
+            name="atk"
+            onChange={(e) => {
+              setNewCard({ ...newCard, atk: e.target.value });
+            }}
+          />
+        </div>
+        <div>
+          <span>DEF:</span>
+          <input
+            type="text"
+            name="def"
+            onChange={(e) => {
+              setNewCard({ ...newCard, def: e.target.value});
+            }}
+          />
+        </div>
+        <button type="submit" className="submit_btn">
+          Enviar
+        </button>
+      </form>
     </section>
   );
 }
