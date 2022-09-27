@@ -1,0 +1,15 @@
+.header{
+    padding: 5px;
+    display: flex;
+    background-color: rgb(167, 167, 67);
+}
+
+.card_header{
+    width: 2rem;
+}
+
+h1{
+    font-size: 1.2rem;
+    text-align: center;
+    justify-content: center;
+}
