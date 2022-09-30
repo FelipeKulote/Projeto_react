@@ -1,0 +1,17 @@
+.listaCards {
+    border: 1px solid rgb(151, 151, 5);
+    border-radius: 10px;
+    width: 25vw;
+    flex-wrap: wrap;
+}
+
+.cardInfos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardPower {
+    display: flex;
+    justify-content: center;
+}

@@ -1,6 +1,6 @@
 import { useState } from "react";
 // import { Card } from "../card/card";
-// import { api } from "../../utils/api/api"
+import { api } from "../../utils/api/api"
 import "./form.css";
 
 export function Form() {
@@ -8,16 +8,9 @@ export function Form() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    // const card = {
-    //   name: e.target.name.value,
-    //   type: e.target.type.value,
-    //   atk: e.target.atk.value,
-    //   def: e.target.def.value,
-    // };
-
-    // api.createanime(newCard);
+    api.createanime(newCard);
   }
-  console.log(newCard);
+
   return (
     <section className="form">
       <form onSubmit={handleSubmit} className="form-input">
@@ -66,8 +59,12 @@ export function Form() {
           Enviar
         </button>
       </form>
-      <div className="cardList">
-            {/* { cardList.map((item, index) => {
+    </section>
+  );
+}
+/* 
+<div className="cardList">
+            { { cardList.map((item, index) => {
               return (
                 <Card
                 name= { item.name }
@@ -75,9 +72,6 @@ export function Form() {
                 atk= { item.atk }
                 def= { item.def } />
               )
-            }) } */}
+            }) } }
           
-      </div>
-    </section>
-  );
-}
+            </div> */

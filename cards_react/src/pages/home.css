@@ -1,0 +1,12 @@
+.titulo {
+    font-size: 2rem;
+    color: rgb(194, 194, 194);
+}
+
+.album {
+    margin: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
