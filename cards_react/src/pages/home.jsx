@@ -1,3 +1,5 @@
 export function Home() {
-    return <div>Hello world</div>
+    return <div>Aqui vão ficar todos os cards
+        
+    </div>
 }

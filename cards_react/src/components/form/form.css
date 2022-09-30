@@ -1,0 +1,28 @@
+.form {
+    display: flex;
+    justify-content: center;
+    margin: 1rem auto;
+    border: solid;
+    border-radius: 15px;
+    width: 30vw;
+}
+
+.titulo-form {
+    padding: 10px;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+span {
+    padding: 10px;
+    font-size: 1.3rem;
+}
+
+.submit_btn {
+    display: flex;
+    margin: 1rem auto;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    justify-content: center;
+}

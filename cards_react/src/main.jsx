@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Form } from "./components/card/card"
+import { Form } from "./components/form/form"
 import { Home } from "./pages/home";
 import { Header } from "./components/header/header";
 import { Footer } from "./components/footer/footer";
