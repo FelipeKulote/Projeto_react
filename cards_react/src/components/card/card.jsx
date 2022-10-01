@@ -2,12 +2,7 @@ import { useState } from "react";
 import "./card.css";
 
 export function Card({ name, atk, def, type }) {
-  const [cardObtido, setCardObtido] = useState({});
-  const marcarCarta = (cardIndex) => {
-    const card = { [cardIndex]: (cardObtido[cardIndex] || 0) +1 };
-    setCardObtido({ ...cardObtido, ...card });
-  };
-
+ 
   return (
     <div className="listaCards">
       <section className="cardInfos">
@@ -27,11 +22,6 @@ export function Card({ name, atk, def, type }) {
           <span className="desc-infos">DEF:</span>
           <h4>{def}</h4>
         </section>
-      </div>
-      <div className="btnsCards">
-        <button className="btnInfos">Informações</button>
-        <button className="btnMarker" onClick={ () => marcarCarta(index) }>Carta obtida</button>
-      <span className="cardMark"></span>
       </div>
       
     </div>

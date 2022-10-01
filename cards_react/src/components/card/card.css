@@ -17,29 +17,3 @@
   flex-wrap: wrap;
 }
 
-.btnsCards {
-  display: flex;
-}
-
-.btnInfos {
-  display: flex;
-  margin: 1rem auto;
-  padding: 0.3rem;
-  text-align: center;
-  border-radius: 10px;
-  border: solid 0.1rem;
-  font-size: 1.5vw;
-  background-color: rgb(0, 0, 0, 0.2);
-  color: white;
-}
-
-.btnMarker {
-  display: flex;
-  margin: 1rem auto;
-  padding: 0.3rem;
-  text-align: center;
-  border-radius: 10px;
-  border: solid 0.1rem;
-  font-size: 1.5vw;
-  background-color: rgb(10, 104, 10);
-}
