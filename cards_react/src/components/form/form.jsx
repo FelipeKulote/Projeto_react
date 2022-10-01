@@ -14,12 +14,13 @@ export function Form() {
   return (
     <section className="form">
       <form onSubmit={handleSubmit} className="form-input">
-        <div className="titulo-form">Novo card</div>
+        <div className="titulo-form">Adicionar nova carta</div>
         <div>
           <span>Nome:</span>
           <input
             type="text"
             name="name"
+            required
             onChange={(e) => {
               setNewCard({ ...newCard, name: e.target.value });
             }}
@@ -30,6 +31,7 @@ export function Form() {
           <input
             type="text"
             name="type"
+            required
             onChange={(e) => {
               setNewCard({ ...newCard, type: e.target.value });
             }}
@@ -40,6 +42,7 @@ export function Form() {
           <input
             type="number"
             name="atk"
+            required
             onChange={(e) => {
               setNewCard({ ...newCard, atk: e.target.value });
             }}
@@ -50,6 +53,7 @@ export function Form() {
           <input
             type="number"
             name="def"
+            required
             onChange={(e) => {
               setNewCard({ ...newCard, def: e.target.value });
             }}

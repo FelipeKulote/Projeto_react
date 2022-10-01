@@ -21,6 +21,10 @@ span {
     font-size: 1.3rem;
 }
 
+input{
+    border-radius: 5px;
+}
+
 .submit_btn {
     display: flex;
     margin: 1rem auto;
