@@ -30,16 +30,33 @@ export function Home() {
     setModalOpen(!modalOpen);
   }
 
-  const [cardObtido, setCardObtido] = useState({});
+  const [cardSelecionado, setCardSelecionado] = useState({});
   const marcarCarta = (cardIndex) => {
-    const card = { [cardIndex]: (cardObtido[cardIndex] || 0) + 1 };
-    setCardObtido({ ...cardObtido, ...card });
+    const card = { [cardIndex]: (cardSelecionado[cardIndex] || 0) + 1 };
+    setCardSelecionado({ ...cardSelecionado, ...card });
   };
+
+  const removerCarta = (cardIndex) => {
+    const card = { [cardIndex]: (cardSelecionado[cardIndex] || 0) - 1 };
+    setCardSelecionado({ ...cardSelecionado, ...card });
+  };
+
+  const botaoAdicionar = (canRender, index) =>
+    Boolean(!canRender) && (
+      <button className="btnMarker" onClick={() => marcarCarta(index)}>
+        Marcar carta
+      </button>
+    );
+
+  const botaoRemover = (canRender, index) =>
+    Boolean(canRender) && (
+      <button className="btnRemove" onClick={() => removerCarta(index)}>
+        Remover carta
+      </button>
+    );
 
   const markerCard = (canRender, index) =>
     Boolean(canRender) && <span className="cardMark">✓</span>;
-  
-
 
   return (
     <section className="home">
@@ -55,17 +72,13 @@ export function Home() {
                 atk={item.atk}
                 def={item.def}
               />
-              {markerCard(cardObtido[index], index)}
+              {markerCard(cardSelecionado[index], index)}
               <div className="btnsCards">
                 <button className="btnInfos" onClick={() => openModal()}>
                   Informações
                 </button>
-                <button
-                  className="btnMarker"
-                  onClick={() => marcarCarta(index)}
-                >
-                  Carta obtida
-                </button>
+                {botaoAdicionar(cardSelecionado[index], index)}
+                {botaoRemover(cardSelecionado[index], index)}
               </div>
             </section>
           );
