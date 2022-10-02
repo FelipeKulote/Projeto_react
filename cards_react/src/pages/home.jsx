@@ -36,6 +36,11 @@ export function Home() {
     setCardObtido({ ...cardObtido, ...card });
   };
 
+  const markerCard = (canRender, index) =>
+    Boolean(canRender) && <span className="cardMark">✓</span>;
+  
+
+
   return (
     <section className="home">
       <h1 className="titulo">Album de cartas Yu-gi-oh</h1>
@@ -50,7 +55,7 @@ export function Home() {
                 atk={item.atk}
                 def={item.def}
               />
-              <span className="cardMark">✓</span>
+              {markerCard(cardObtido[index], index)}
               <div className="btnsCards">
                 <button className="btnInfos" onClick={() => openModal()}>
                   Informações

@@ -8,7 +8,7 @@ export function Form() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    api.createanime(newCard);
+    api.createCard(newCard);
   }
 
   return (
@@ -66,16 +66,3 @@ export function Form() {
     </section>
   );
 }
-/* 
-<div className="cardList">
-            { { cardList.map((item, index) => {
-              return (
-                <Card
-                name= { item.name }
-                type= { item.type }
-                atk= { item.atk }
-                def= { item.def } />
-              )
-            }) } }
-          
-            </div> */
