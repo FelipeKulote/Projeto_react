@@ -20,3 +20,10 @@
 .desc-infos {
   font-size: 1rem;
 }
+
+@media (max-width: 580px) {
+
+  .listaCards{
+      width: 100%;
+  }
+}

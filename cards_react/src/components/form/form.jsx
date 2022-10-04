@@ -1,14 +1,14 @@
 import { useState } from "react";
-// import { Card } from "../card/card";
-import { api } from "../../utils/api/api"
+import { api } from "../../utils/api/api";
 import "./form.css";
 
-export function Form() {
+export function Form({getAll}) {
   const [newCard, setNewCard] = useState();
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    api.createCard(newCard);
+    await api.createCard(newCard);
+    await getAll();
   }
 
   return (

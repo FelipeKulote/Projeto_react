@@ -1,61 +1,83 @@
 .titulo {
-    font-size: 2rem;
-    color: rgb(194, 194, 194);
+  font-size: 2rem;
+  color: rgb(194, 194, 194);
 }
 
 .album {
-    margin: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+  margin: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
-.cardMark{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem auto;
-    background-color: green;
-    width: 10%;
-    height: 1rem;
-    border-radius: 100%;
+.cardMark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  background-color: green;
+  width: 10%;
+  height: 1rem;
+  border-radius: 100%;
 }
 
 .btnsCards {
-    display: flex;
+  display: flex;
+}
+
+.btnInfos {
+  display: flex;
+  margin: 1rem auto;
+  padding: 0.3rem;
+  text-align: center;
+  border-radius: 10px;
+  border: solid 0.1rem;
+  font-size: 1.5vw;
+  background-color: rgb(0, 0, 0, 0.2);
+  color: white;
+  cursor: pointer;
+}
+
+.btnMarker {
+  display: flex;
+  margin: 1rem auto;
+  padding: 0.3rem;
+  text-align: center;
+  border-radius: 10px;
+  border: solid 0.1rem;
+  font-size: 1.5vw;
+  background-color: rgb(5, 95, 5, 0.8);
+  cursor: pointer;
+}
+
+.btnRemove {
+  display: flex;
+  margin: 1rem auto;
+  padding: 0.3rem;
+  text-align: center;
+  border-radius: 10px;
+  border: solid 0.1rem;
+  font-size: 1.5vw;
+  background-color: rgb(117, 7, 7, 0.6);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+  .btnsCards{
+    flex-direction: column-reverse;
   }
-  
-  .btnInfos {
-    display: flex;
-    margin: 1rem auto;
-    padding: 0.3rem;
-    text-align: center;
-    border-radius: 10px;
-    border: solid 0.1rem;
-    font-size: 1.5vw;
-    background-color: rgb(0, 0, 0, 0.2);
-    color: white;
+
+  .btnInfos{
+    font-size: 1rem;
   }
-  
-  .btnMarker {
-    display: flex;
-    margin: 1rem auto;
-    padding: 0.3rem;
-    text-align: center;
-    border-radius: 10px;
-    border: solid 0.1rem;
-    font-size: 1.5vw;
-    background-color: rgb(5, 95, 5, 0.8);
+
+  .btnMarker{
+    font-size: 1rem;
   }
-  
+
   .btnRemove {
-    display: flex;
-    margin: 1rem auto;
-    padding: 0.3rem;
-    text-align: center;
-    border-radius: 10px;
-    border: solid 0.1rem;
-    font-size: 1.5vw;
-    background-color: rgb(117, 7, 7, 0.6);
+    font-size: 1rem;
   }
+}
