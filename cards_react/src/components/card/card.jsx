@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./card.css";
 
 export function Card({ name, atk, def, type }) {
- 
   return (
     <div className="listaCards">
       <section className="cardInfos">
@@ -23,7 +22,6 @@ export function Card({ name, atk, def, type }) {
           <h4>{def}</h4>
         </section>
       </div>
-      
     </div>
   );
 }

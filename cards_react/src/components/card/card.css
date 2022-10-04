@@ -22,8 +22,7 @@
 }
 
 @media (max-width: 580px) {
-
-  .listaCards{
-      width: 100%;
+  .listaCards {
+    width: 100%;
   }
 }

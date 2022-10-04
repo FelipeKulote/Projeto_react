@@ -2,7 +2,7 @@ import { useState } from "react";
 import { api } from "../../utils/api/api";
 import "./form.css";
 
-export function Form({getAll}) {
+export function Form({ getAll }) {
   const [newCard, setNewCard] = useState();
 
   async function handleSubmit(e) {

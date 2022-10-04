@@ -64,16 +64,15 @@
 }
 
 @media (max-width: 768px) {
-
-  .btnsCards{
+  .btnsCards {
     flex-direction: column-reverse;
   }
 
-  .btnInfos{
+  .btnInfos {
     font-size: 1rem;
   }
 
-  .btnMarker{
+  .btnMarker {
     font-size: 1rem;
   }
 

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Form } from "../components/form/form"
+import { Form } from "../components/form/form";
 import { Card } from "../components/card/card";
 import { api } from "../utils/api/api";
 import Modal from "react-modal";
