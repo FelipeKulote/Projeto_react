@@ -33,7 +33,7 @@
   text-align: center;
   border-radius: 10px;
   border: solid 0.1rem;
-  font-size: 1.5vw;
+  font-size: 2vw;
   background-color: rgb(0, 0, 0, 0.2);
   color: white;
   cursor: pointer;
@@ -46,7 +46,7 @@
   text-align: center;
   border-radius: 10px;
   border: solid 0.1rem;
-  font-size: 1.5vw;
+  font-size: 2vw;
   background-color: rgb(5, 95, 5, 0.8);
   cursor: pointer;
 }
@@ -58,9 +58,36 @@
   text-align: center;
   border-radius: 10px;
   border: solid 0.1rem;
-  font-size: 1.5vw;
+  font-size: 2vw;
   background-color: rgb(117, 7, 7, 0.6);
   cursor: pointer;
+}
+
+.modalButtons {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.btnEdit {
+  width: 50%;
+  font-size: 2vw;
+  padding: 0.5rem;
+  border-radius: 10px;
+  color: white;
+  background-color: rgb(93, 93, 93);
+  cursor: pointer;  
+}
+
+.btnDelete {
+  width: 50%;
+  font-size: 2vw;
+  padding: 0.5rem;
+  border-radius: 10px;
+  color: white;
+  background-color: rgba(137, 2, 2, 0.826);
+  cursor: pointer;  
 }
 
 @media (max-width: 768px) {
@@ -68,15 +95,16 @@
     flex-direction: column-reverse;
   }
 
-  .btnInfos {
+  .btnInfos, .btnMarker, .btnRemove, .btnEdit, .btnDelete {
     font-size: 1rem;
   }
 
-  .btnMarker {
-    font-size: 1rem;
+  .btnEdit, .btnDelete{
+    width: 6rem;
   }
 
-  .btnRemove {
-    font-size: 1rem;
+  .modalButtons{
+    margin-top: 2rem;
+    flex-wrap: wrap;
   }
 }

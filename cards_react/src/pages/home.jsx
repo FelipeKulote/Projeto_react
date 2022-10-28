@@ -38,6 +38,18 @@ export function Home() {
     getCard();
   }, []);
 
+  function deleteCard(cardId) {
+    api.deleteCard(cardId);
+    const newCardList = cardList;
+    newCardList.map((card, index) => {
+      if (card.id === cardId) {
+        newCardList.splice(index, 1);
+        setCardList(newCardList);
+        handleModal();
+      }
+    });
+  }
+
   const [modalOpen, setModalOpen] = useState(false);
   function handleModal() {
     setModalOpen(!modalOpen);
@@ -116,6 +128,17 @@ export function Home() {
           <h3>{uniqueCard.type}</h3>
           <h3>{uniqueCard.atk}</h3>
           <h3>{uniqueCard.def}</h3>
+          <div className="modalButtons">
+            <button className="btnEdit">Editar</button>
+            <button
+              className="btnDelete"
+              onClick={() => {
+                deleteCard(uniqueCard.id);
+              }}
+            >
+              Deletar
+            </button>
+          </div>
         </section>
       </Modal>
     </section>
