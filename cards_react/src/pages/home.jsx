@@ -39,9 +39,10 @@ export function Home() {
   }, []);
 
   const [editCard, setEditCard] = useState(false);
-  function editCardItens(e, cardId) {
+  function editCardItens(e) {
     e.preventDefault();
-    const cardEdited = {
+    const editedCard = {
+      id: uniqueCard.id,
       name: e.target.name.value,
       type: e.target.type.value,
       atk: e.target.atk.value,
@@ -49,13 +50,14 @@ export function Home() {
     };
     const newCardList = cardList;
     newCardList.map((item, index) => {
-      if (item.id === cardId) {
-        newCardList.splice(index, 1, cardEdited);
+      if (item.id === editedCard.id) {
+        newCardList.splice(index, 1, editedCard);
         setCardList(newCardList);
         handleModal();
       }
     });
     setEditCard(false);
+    api.updateCard(editedCard);
   }
 
   function deleteCard(cardId) {
